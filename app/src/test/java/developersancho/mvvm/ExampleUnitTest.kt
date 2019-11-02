@@ -1,4 +1,4 @@
-package developersancho.cleanarchitecturemvvm
+package developersancho.mvvm
 
 import org.junit.Test
 

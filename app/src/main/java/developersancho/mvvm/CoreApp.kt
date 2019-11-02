@@ -1,4 +1,4 @@
-package developersancho.cleanarchitecturemvvm
+package developersancho.mvvm
 
 import android.app.Application
 import android.content.Context

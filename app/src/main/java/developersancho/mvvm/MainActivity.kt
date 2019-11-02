@@ -1,4 +1,4 @@
-package developersancho.cleanarchitecturemvvm
+package developersancho.mvvm
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
