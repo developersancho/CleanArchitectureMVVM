@@ -13,7 +13,7 @@ android {
     buildToolsVersion(Versions.buildTools)
 
     defaultConfig {
-        applicationId ApplicationId.id
+        applicationId = ApplicationId.id
         minSdkVersion(Versions.minSdk)
         targetSdkVersion(Versions.targetSdk)
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
