@@ -6,7 +6,7 @@ buildscript {
         google()
         jcenter()
         mavenCentral()
-        maven { url = uri(BuildPlugins.jitpack) }
+        maven { url = BuildPlugins.jitpack }
     }
 
     dependencies {
@@ -23,10 +23,10 @@ allprojects {
         google()
         jcenter()
         mavenCentral()
-        maven { url = uri(BuildPlugins.jitpack) }
+        maven { url = BuildPlugins.jitpack }
     }
 }
 
-tasks.register("clean", Delete::class) {
-    delete(rootProject.buildDir)
+task clean(type: Delete) {
+    delete rootProject.buildDir
 }
