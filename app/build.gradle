@@ -110,6 +110,8 @@ dependencies {
     implementation project(Modules.remote)
     implementation project(Modules.local)
     implementation project(Modules.widget)
+    implementation project(Modules.common)
+
     implementation(Libraries.kotlin)
     implementation(Libraries.appCompat)
     implementation(Libraries.coreKtx)

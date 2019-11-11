@@ -4,6 +4,7 @@ object Modules {
     val widget = ":widget"
     val local = ":local"
     val repository = ":repository"
+    val common = ":common"
 }
 
 object ApplicationId {
