@@ -35,7 +35,6 @@ fun remoteModule(baseUrl: String) = module {
                         "Cache-Control",
                         "public, only-if-cached, max-stale=" + 60 * 60 * 24 * 7
                     )
-                    //throw ConnectionException("The internet connection appears to be offline")
                 }
 
                 chain.proceed(request.build())
