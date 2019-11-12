@@ -36,6 +36,8 @@ object Versions {
     val junit = "4.12"
     val junitExt = "1.1.1"
     val espresso = "3.2.0"
+    val mockWebServer = "2.7.5"
+    val retrofitCoroutines = "0.9.2"
 }
 
 object Libraries {
@@ -83,6 +85,7 @@ object Libraries {
     val gson = "com.google.code.gson:gson:${Versions.gson}"
     val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
     val retrofitConvertorGson = "com.squareup.retrofit2:converter-gson:${Versions.retrofit}"
+    val retrofitCoroutineAdapter = "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:${Versions.retrofitCoroutines}"
 
     // okhttp
     val okhttp = "com.squareup.okhttp3:okhttp:${Versions.okhttp}"
@@ -101,7 +104,7 @@ object Libraries {
     val junit = "junit:junit:${Versions.junit}"
     val junitExt = "androidx.test.ext:junit:${Versions.junitExt}"
     val espressoCore = "androidx.test.espresso:espresso-core:${Versions.espresso}"
-
+    val mockWebServer = "com.squareup.okhttp:mockwebserver:${Versions.mockWebServer}"
 }
 
 object BuildPlugins {

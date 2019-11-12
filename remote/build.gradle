@@ -34,10 +34,33 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(Modules.common)
     implementation(Libraries.kotlin)
     implementation(Libraries.appCompat)
     implementation(Libraries.coreKtx)
+
+    // coroutines
+    implementation(Libraries.kotlinCoroutineAndroid)
+    implementation(Libraries.kotlinCoroutineCore)
+    // retrofit
+    implementation(Libraries.gson)
+    implementation(Libraries.retrofit)
+    implementation(Libraries.retrofitConvertorGson)
+    implementation(Libraries.okhttp)
+    implementation(Libraries.okhttpLogging)
+    implementation(Libraries.retrofitCoroutineAdapter)
+
+    // koin
+    implementation(Libraries.koinAndroid)
+    implementation(Libraries.koinCore)
+    implementation(Libraries.koinScope)
+    implementation(Libraries.koinViewModel)
+
+    // test
     testImplementation(Libraries.junit)
-    androidTestImplementation(Libraries.junitExt)
-    androidTestImplementation(Libraries.espressoCore)
+    testImplementation(Libraries.junitExt)
+    testImplementation(Libraries.koinTest)
+    testImplementation(Libraries.mockWebServer)
+
+
 }

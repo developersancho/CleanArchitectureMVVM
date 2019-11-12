@@ -39,6 +39,19 @@ dependencies {
     implementation(Libraries.kotlin)
     implementation(Libraries.appCompat)
     implementation(Libraries.coreKtx)
+
+    // coroutines
+    implementation(Libraries.kotlinCoroutineAndroid)
+    implementation(Libraries.kotlinCoroutineCore)
+    // retrofit
+    implementation(Libraries.gson)
+    implementation(Libraries.retrofit)
+    // koin
+    implementation(Libraries.koinAndroid)
+    implementation(Libraries.koinCore)
+    implementation(Libraries.koinScope)
+    implementation(Libraries.koinViewModel)
+
     testImplementation(Libraries.junit)
     androidTestImplementation(Libraries.junitExt)
     androidTestImplementation(Libraries.espressoCore)
