@@ -76,9 +76,9 @@ android {
             versionCode = buildVersionCode
             versionName = '1.0.0'
             versionNameSuffix = '-dev'
-            buildConfigField("String", "BASE_URL", "\"https://api.developersancho.com/v1/\"")
-            buildConfigField("String", "ROOT_URL", "\"https://api.developersancho.com/\"")
-            buildConfigField("String", "API_HOST", "\"api.developersancho.com\"")
+            buildConfigField("String", "BASE_URL", "\"https://api.github.com/\"")
+            buildConfigField("String", "ROOT_URL", "\"https://api.github.com/\"")
+            buildConfigField("String", "API_HOST", "\"api.github.com/\"")
             resValue "string", "app_name", "Test - App"
         }
 
@@ -88,9 +88,9 @@ android {
             versionCode = buildVersionCode
             versionName = '1.0.0'
             versionNameSuffix = ''
-            buildConfigField("String", "BASE_URL", "\"https://api.developersancho.com/v1/\"")
-            buildConfigField("String", "ROOT_URL", "\"https://api.developersancho.com/\"")
-            buildConfigField("String", "API_HOST", "\"api.developersancho.com\"")
+            buildConfigField("String", "BASE_URL", "\"https://api.github.com/\"")
+            buildConfigField("String", "ROOT_URL", "\"https://api.github.com/\"")
+            buildConfigField("String", "API_HOST", "\"api.github.com/\"")
             resValue "string", "app_name", "Prod - App"
         }
     }
