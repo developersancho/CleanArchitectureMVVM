@@ -105,6 +105,7 @@ object Libraries {
     val junitExt = "androidx.test.ext:junit:${Versions.junitExt}"
     val espressoCore = "androidx.test.espresso:espresso-core:${Versions.espresso}"
     val mockWebServer = "com.squareup.okhttp:mockwebserver:${Versions.mockWebServer}"
+    val coroutineTest = "org.jetbrains.kotlinx:kotlinx-coroutines-test:${Versions.coroutines}"
 }
 
 object BuildPlugins {
