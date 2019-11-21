@@ -49,6 +49,7 @@ dependencies {
     implementation(Libraries.coreKtx)
     // room
     implementation(Libraries.room)
+    implementation(Libraries.roomKtx)
     kapt(Libraries.roomCompiler)
     // koin
     implementation(Libraries.koinAndroid)
