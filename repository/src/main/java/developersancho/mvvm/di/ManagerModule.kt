@@ -5,5 +5,5 @@ import developersancho.mvvm.IDataManager
 import org.koin.dsl.module
 
 val managerModule = module {
-    factory { DataManager(get()) as IDataManager }
+    factory { DataManager(get(), get()) as IDataManager }
 }

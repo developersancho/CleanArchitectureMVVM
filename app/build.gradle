@@ -79,6 +79,7 @@ android {
             buildConfigField("String", "BASE_URL", "\"https://api.github.com/\"")
             buildConfigField("String", "ROOT_URL", "\"https://api.github.com/\"")
             buildConfigField("String", "API_HOST", "\"api.github.com/\"")
+            buildConfigField("String", 'DB_NAME', '"github.db"')
             resValue "string", "app_name", "Test - App"
         }
 
@@ -91,6 +92,7 @@ android {
             buildConfigField("String", "BASE_URL", "\"https://api.github.com/\"")
             buildConfigField("String", "ROOT_URL", "\"https://api.github.com/\"")
             buildConfigField("String", "API_HOST", "\"api.github.com/\"")
+            buildConfigField("String", 'DB_NAME', '"github.db"')
             resValue "string", "app_name", "Prod - App"
         }
     }

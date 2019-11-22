@@ -67,6 +67,7 @@ object Libraries {
     // room database for local
     val room = "androidx.room:room-runtime:${Versions.room}"
     val roomCompiler = "androidx.room:room-compiler:${Versions.room}"
+    val roomKtx = "androidx.room:room-ktx:${Versions.room}"
 
     // koin for di
     val koinCore = "org.koin:koin-core:${Versions.koin}"
@@ -105,6 +106,7 @@ object Libraries {
     val junitExt = "androidx.test.ext:junit:${Versions.junitExt}"
     val espressoCore = "androidx.test.espresso:espresso-core:${Versions.espresso}"
     val mockWebServer = "com.squareup.okhttp:mockwebserver:${Versions.mockWebServer}"
+    val coroutineTest = "org.jetbrains.kotlinx:kotlinx-coroutines-test:${Versions.coroutines}"
 }
 
 object BuildPlugins {
