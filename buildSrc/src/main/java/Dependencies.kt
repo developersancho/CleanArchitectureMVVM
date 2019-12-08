@@ -38,6 +38,7 @@ object Versions {
     val espresso = "3.2.0"
     val mockWebServer = "2.7.5"
     val retrofitCoroutines = "0.9.2"
+    val timber = "4.7.1"
 }
 
 object Libraries {
@@ -63,6 +64,8 @@ object Libraries {
     // glide for image
     val glide = "com.github.bumptech.glide:glide:${Versions.glide}"
     val glideCompiler = "com.github.bumptech.glide:compiler:${Versions.glide}"
+
+    val timber = "com.jakewharton.timber:timber:${Versions.timber}"
 
     // room database for local
     val room = "androidx.room:room-runtime:${Versions.room}"

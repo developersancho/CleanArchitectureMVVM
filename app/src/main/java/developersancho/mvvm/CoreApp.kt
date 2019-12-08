@@ -7,6 +7,7 @@ import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidFileProperties
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
+import timber.log.Timber
 
 class CoreApp : Application() {
 
@@ -18,6 +19,11 @@ class CoreApp : Application() {
         super.onCreate()
         context = applicationContext
         configureDi()
+        configureTimber()
+    }
+
+    private fun configureTimber() {
+        Timber.plant(Timber.DebugTree())
     }
 
     private fun configureDi() = startKoin {

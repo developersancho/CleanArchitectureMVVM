@@ -157,6 +157,8 @@ dependencies {
     // glide
     implementation(Libraries.glide)
     kapt(Libraries.glideCompiler)
+    // timber
+    implementation(Libraries.timber)
 
     // test implementation
     testImplementation(Libraries.koinTest)

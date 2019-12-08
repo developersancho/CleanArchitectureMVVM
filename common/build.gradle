@@ -44,6 +44,7 @@ dependencies {
     implementation(Libraries.lifeCycleViewModel)
     implementation(Libraries.lifeCycleViewModelKtx)
     implementation(Libraries.lifeCycleExtension)
+    implementation(Libraries.timber)
 
     testImplementation(Libraries.junit)
     androidTestImplementation(Libraries.junitExt)
