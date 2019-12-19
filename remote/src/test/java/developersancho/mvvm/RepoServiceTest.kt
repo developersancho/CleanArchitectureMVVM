@@ -27,6 +27,19 @@ class RepoServiceTest : BaseServiceTest() {
     }
 
     @Test
+    fun `search repo2`() {
+        mockHttpResponse(mockServer, "user_repos.json", HttpURLConnection.HTTP_OK)
+        runBlocking {
+            val response = repoService.repos2("developersancho")
+
+            Assert.assertEquals(30, response?.size)
+            Assert.assertEquals(117545989, response?.first()?.id)
+            Assert.assertEquals("a4app", response?.first()?.name)
+        }
+    }
+
+
+    @Test
     fun `search repo and not found`() {
         mockHttpResponse(mockServer, "user_repos.json", HttpURLConnection.HTTP_NOT_FOUND)
         runBlocking {

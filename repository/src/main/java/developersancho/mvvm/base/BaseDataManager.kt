@@ -25,6 +25,15 @@ abstract class BaseDataManager {
         }
     }
 
+    protected suspend fun <T : Any> resultWrapperSuspend2(call: suspend () -> T): ResponseWrapper<T> {
+        return try {
+            val response = call()
+            ResponseWrapper.Success(response)
+        } catch (ex: Throwable) {
+            ResponseWrapper.Error(RemoteDataException(ex))
+        }
+    }
+
     protected suspend inline fun <reified T : Any> resultWrapperDeferred(request: Deferred<Response<T>>): ResponseWrapper<T> {
         return try {
             val response = request.await()

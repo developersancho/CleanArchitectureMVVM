@@ -39,6 +39,8 @@ object Versions {
     val mockWebServer = "2.7.5"
     val retrofitCoroutines = "0.9.2"
     val timber = "4.7.1"
+    val mockk = "1.9.3"
+    val MOCKITO = "2.2.0"
 }
 
 object Libraries {
@@ -46,7 +48,7 @@ object Libraries {
     val kotlin = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${Versions.kotlin}"
     val kotlinCoroutineCore = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutines}"
     val kotlinCoroutineAndroid =
-        "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutines}"
+        "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutines}"
 
     // android
     val appCompat = "androidx.appcompat:appcompat:${Versions.appCompat}"
@@ -89,7 +91,8 @@ object Libraries {
     val gson = "com.google.code.gson:gson:${Versions.gson}"
     val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
     val retrofitConvertorGson = "com.squareup.retrofit2:converter-gson:${Versions.retrofit}"
-    val retrofitCoroutineAdapter = "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:${Versions.retrofitCoroutines}"
+    val retrofitCoroutineAdapter =
+        "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:${Versions.retrofitCoroutines}"
 
     // okhttp
     val okhttp = "com.squareup.okhttp3:okhttp:${Versions.okhttp}"
@@ -110,6 +113,8 @@ object Libraries {
     val espressoCore = "androidx.test.espresso:espresso-core:${Versions.espresso}"
     val mockWebServer = "com.squareup.okhttp:mockwebserver:${Versions.mockWebServer}"
     val coroutineTest = "org.jetbrains.kotlinx:kotlinx-coroutines-test:${Versions.coroutines}"
+    val mockk = "io.mockk:mockk:${Versions.mockk}"
+    val MOCKITO = "com.nhaarman.mockitokotlin2:mockito-kotlin:${Versions.MOCKITO}"
 }
 
 object BuildPlugins {

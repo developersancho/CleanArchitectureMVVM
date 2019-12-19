@@ -39,20 +39,28 @@ dependencies {
     implementation(Libraries.kotlin)
     implementation(Libraries.appCompat)
     implementation(Libraries.coreKtx)
-
+    implementation(Libraries.timber)
     // coroutines
     implementation(Libraries.kotlinCoroutineAndroid)
     implementation(Libraries.kotlinCoroutineCore)
     // retrofit
     implementation(Libraries.gson)
     implementation(Libraries.retrofit)
+    implementation(Libraries.retrofitConvertorGson)
+    implementation(Libraries.okhttp)
+    implementation(Libraries.okhttpLogging)
+    implementation(Libraries.retrofitCoroutineAdapter)
     // koin
     implementation(Libraries.koinAndroid)
     implementation(Libraries.koinCore)
     implementation(Libraries.koinScope)
     implementation(Libraries.koinViewModel)
-
+    // test
     testImplementation(Libraries.junit)
+    testImplementation(Libraries.koinTest)
+    testImplementation(Libraries.mockWebServer)
+    testImplementation(Libraries.mockk)
+    testImplementation(Libraries.MOCKITO)
     androidTestImplementation(Libraries.junitExt)
     androidTestImplementation(Libraries.espressoCore)
 }

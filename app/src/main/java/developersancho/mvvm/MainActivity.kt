@@ -14,11 +14,13 @@ class MainActivity : AppCompatActivity(), IBasePresenter {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         viewModel.setPresenter(this)
-        viewModel.repos.observe(this, Observer {
+        viewModel.reposFromAPI.observe(this, Observer {
             showLongToast(it.first().fullName.toString())
         })
 
-        viewModel.getRepos("developersancho")
+
+
+        viewModel.getReposFromAPI2("developersancho")
 
     }
 }

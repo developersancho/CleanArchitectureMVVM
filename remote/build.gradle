@@ -2,6 +2,7 @@ plugins {
     id("com.android.library")
     id("kotlin-android")
     id("kotlin-android-extensions")
+    id("kotlin-kapt")
 }
 android {
     compileSdkVersion(Versions.compileSdk)
@@ -30,6 +31,10 @@ android {
         jvmTarget = "1.8"
     }
 
+    kapt {
+        useBuildCache = true
+    }
+
 }
 
 dependencies {
@@ -50,6 +55,12 @@ dependencies {
     implementation(Libraries.okhttpLogging)
     implementation(Libraries.retrofitCoroutineAdapter)
 
+    // lifecycle
+    implementation(Libraries.lifeCycleLiveData)
+    implementation(Libraries.lifeCycleViewModel)
+    //implementation(Libraries.lifeCycleViewModelKtx)
+    implementation(Libraries.lifeCycleExtension)
+    kapt(Libraries.lifeCycleCommon)
     // koin
     implementation(Libraries.koinAndroid)
     implementation(Libraries.koinCore)

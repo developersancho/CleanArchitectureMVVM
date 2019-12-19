@@ -11,4 +11,7 @@ interface IRepoService {
     suspend fun repos(@Path("user") user: String): Response<ArrayList<Repos>>
 
 
+    @GET("users/{user}/repos")
+    suspend fun repos2(@Path("user") user: String): ArrayList<Repos>
+
 }
