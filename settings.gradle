@@ -1,3 +1,3 @@
-include ':app', ':remote', ':widget', ':local', ':repository', ':common'
+include ':app'
 
 rootProject.name = 'CleanArchitectureMVVM'

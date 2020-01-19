@@ -1,8 +1,8 @@
 object Modules {
     val app = ":app"
-    val remote = ":remote"
     val widget = ":widget"
-    val local = ":local"
+    val remote = ":core:remote"
+    val local = ":core:local"
     val repository = ":repository"
     val common = ":common"
 }
@@ -129,4 +129,8 @@ object BuildPlugins {
     val kotlinAndroidExtensions = "kotlin-android-extensions"
     val kotlinKapt = "kotlin-kapt"
     val kotlinSafeArgs = "androidx.navigation.safeargs.kotlin"
+
+    val supportLibraryVectorDrawables = true
+    val multidexEnable = true
+    val testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 }

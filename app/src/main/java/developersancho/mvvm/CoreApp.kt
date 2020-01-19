@@ -2,7 +2,6 @@ package developersancho.mvvm
 
 import android.app.Application
 import android.content.Context
-import developersancho.mvvm.di.appModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidFileProperties
 import org.koin.android.ext.koin.androidLogger
@@ -18,7 +17,7 @@ class CoreApp : Application() {
     override fun onCreate() {
         super.onCreate()
         context = applicationContext
-        configureDi()
+        //configureDi()
         configureTimber()
     }
 
@@ -34,6 +33,6 @@ class CoreApp : Application() {
         // load properties from assets/koin.properties file
         androidFileProperties()
         // module list
-        modules(appModule)
+        //modules(appModule)
     }
 }
