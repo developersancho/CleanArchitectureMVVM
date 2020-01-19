@@ -1,3 +1,8 @@
-include ':app'
-
 rootProject.name = 'CleanArchitectureMVVM'
+
+include(Modules.app)
+include(Modules.local)
+include(Modules.remote)
+include(Modules.manager)
+include(Modules.util)
+include(Modules.widget)

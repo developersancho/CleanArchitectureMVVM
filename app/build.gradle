@@ -108,7 +108,7 @@ android.applicationVariants.all { variant ->
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation(Libraries.kotlin)
+    implementation(Libraries.kotlinStdLib)
     implementation(Libraries.appCompat)
     implementation(Libraries.coreKtx)
     implementation(Libraries.constraintLayout)
@@ -119,9 +119,7 @@ dependencies {
     // Bindings
     kapt(Libraries.databinding)
     // navigation
-    implementation(Libraries.navFragment)
     implementation(Libraries.navFragmentKtx)
-    implementation(Libraries.navUi)
     implementation(Libraries.navUiKtx)
     // Coroutines
     implementation(Libraries.kotlinCoroutineCore)
@@ -133,12 +131,10 @@ dependencies {
     // okhttp
     implementation(Libraries.okhttp)
     implementation(Libraries.okhttpLogging)
-    implementation(Libraries.okhttpUrlConnection)
     // lifecycle
-    implementation(Libraries.lifeCycleLiveData)
-    implementation(Libraries.lifeCycleViewModel)
-    //implementation(Libraries.lifeCycleViewModelKtx)
-    implementation(Libraries.lifeCycleExtension)
+    implementation(Libraries.lifeCycleViewModelKtx)
+    implementation(Libraries.lifeCycleLiveDataKtx)
+    implementation(Libraries.lifeCycleRunTimeKtx)
     kapt(Libraries.lifeCycleCommon)
     // koin for di
     implementation(Libraries.koinCore)
