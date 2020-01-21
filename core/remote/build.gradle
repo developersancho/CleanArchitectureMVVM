@@ -60,7 +60,7 @@ dependencies {
     testImplementation(Libraries.junitExt)
     testImplementation(Libraries.koinTest)
     testImplementation(Libraries.mockWebServer)
-    testImplementation(Libraries.coroutineTest)
+    testImplementation(Libraries.koinTest)
 
 
     implementation project(Modules.util)

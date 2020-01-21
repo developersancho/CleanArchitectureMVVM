@@ -16,9 +16,9 @@ android {
         applicationId = ApplicationId.id
         minSdkVersion(Versions.minSdk)
         targetSdkVersion(Versions.targetSdk)
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        vectorDrawables.useSupportLibrary = true
-        multiDexEnabled true
+        testInstrumentationRunner(BuildPlugins.testInstrumentationRunner)
+        vectorDrawables.useSupportLibrary(BuildPlugins.supportLibraryVectorDrawables)
+        multiDexEnabled(BuildPlugins.multidexEnable)
     }
 
     buildTypes {
@@ -45,12 +45,12 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = '1.8'
-        targetCompatibility = '1.8'
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
     }
 
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
     }
 
     dataBinding {

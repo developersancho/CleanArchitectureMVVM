@@ -14,6 +14,7 @@ import java.io.File
 import java.util.*
 import java.util.concurrent.TimeUnit
 
+// TODO("do Auth Interceptor")
 fun remoteModule(baseUrl: String, isDebug: Boolean = true) = module {
 
     single { File(androidContext().cacheDir, UUID.randomUUID().toString()) }
