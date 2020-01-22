@@ -9,6 +9,8 @@ import java.io.IOException
 
 abstract class BaseDataManager {
 
+    // TODO("add retry policy and local(db) cache via remote service method")
+
     protected suspend fun <T : Any> apiCallResponse(call: suspend () -> Response<T>): NetworkState<T> {
         return try {
             val response = call()

@@ -1,6 +1,7 @@
 package com.developersancho.manager
 
 import com.developersancho.local.dao.FavDao
+import com.developersancho.local.entity.FavEntity
 import com.developersancho.manager.base.BaseDataManager
 import com.developersancho.remote.model.RepoResponse
 import com.developersancho.remote.network.NetworkState
@@ -16,4 +17,8 @@ class DataManager(
     override fun getRepos(userName: String): Flow<NetworkState<RepoResponse>> = flow {
         emit(apiCall { repoService.repos(userName) })
     }
+
+    override suspend fun insertFav(favEntity: FavEntity) = favDao.insert(favEntity)
+
+    override suspend fun favList(): List<FavEntity> = favDao.favList()
 }

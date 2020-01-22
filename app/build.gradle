@@ -53,9 +53,9 @@ android {
         jvmTarget = JavaVersion.VERSION_1_8.toString()
     }
 
-    dataBinding {
-        enabled = true
-    }
+    dataBinding.enabled = true
+
+    viewBinding.enabled = true
 
     androidExtensions {
         experimental = true
@@ -108,6 +108,12 @@ android.applicationVariants.all { variant ->
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(Modules.manager)
+    implementation project(Modules.local)
+    implementation project(Modules.remote)
+    implementation project(Modules.widget)
+    implementation project(Modules.util)
+
     implementation(Libraries.kotlinStdLib)
     implementation(Libraries.appCompat)
     implementation(Libraries.coreKtx)
@@ -116,8 +122,10 @@ dependencies {
     implementation(Libraries.legacy)
     // firebase
     implementation(Libraries.firebaseCore)
+
     // Bindings
     kapt(Libraries.databinding)
+
     // navigation
     implementation(Libraries.navFragmentKtx)
     implementation(Libraries.navUiKtx)

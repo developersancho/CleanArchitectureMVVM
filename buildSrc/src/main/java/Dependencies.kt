@@ -17,7 +17,7 @@ object Versions {
     const val targetSdk = 29
     const val buildTools = "29.0.2"
     const val kotlinPlugin = "1.3.61"
-    const val androidPlugin = "3.5.3"
+    const val androidPlugin = "3.6.0-rc01"
 
     const val navigation = "2.1.0"
     const val appCompat = "1.1.0"
