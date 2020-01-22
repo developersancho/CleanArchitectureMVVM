@@ -1,5 +1,6 @@
 package com.developersancho.remote.di
 
+import com.developersancho.remote.network.AuthInterceptor
 import com.developersancho.remote.service.IRepoService
 import com.developersancho.util.NetworkUtils
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
@@ -14,7 +15,6 @@ import java.io.File
 import java.util.*
 import java.util.concurrent.TimeUnit
 
-// TODO("do Auth Interceptor")
 fun remoteModule(baseUrl: String, isDebug: Boolean = true) = module {
 
     single { File(androidContext().cacheDir, UUID.randomUUID().toString()) }
@@ -31,7 +31,7 @@ fun remoteModule(baseUrl: String, isDebug: Boolean = true) = module {
             .addInterceptor { chain ->
                 var request = chain.request().newBuilder()
 
-                // for offline request
+                // for offline request that we caching
                 if (NetworkUtils.hasInternet(androidContext())) {
                     request.addHeader("Cache-Control", "public, max-age=" + 1)
                 } else {
@@ -50,6 +50,7 @@ fun remoteModule(baseUrl: String, isDebug: Boolean = true) = module {
                 else
                     HttpLoggingInterceptor.Level.NONE
             })
+            //.addInterceptor(AuthInterceptor(tokenType = "Bearer", accessToken = "*********"))
             .build()
     }
 
