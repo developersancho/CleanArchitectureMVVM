@@ -41,6 +41,7 @@ You require the latest Android Studio 3.6 RC1 (or newer) to be able to build the
 -   [Glide](https://github.com/bumptech/glide) -  image loading and caching library for Android focused on smooth scrolling.
 -   [Gson](https://github.com/google/gson) - makes it easy to parse JSON into Kotlin objects.
 -   [Timber](https://github.com/JakeWharton/timber) - a logger with a small, extensible API which provides utility on top of Android's normal Log class.
+-   [Gradle Kotlin DSL](https://github.com/gradle/kotlin-dsl-samples) - makes it easy to manage dependency all module that we have
 -   [and more...](https://github.com/developersancho/CleanArchitectureMVVM/blob/development/buildSrc/src/main/java/Dependencies.kt)
 
 ### Test Dependencies
