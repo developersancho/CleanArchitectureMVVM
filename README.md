@@ -61,6 +61,11 @@ You require the latest Android Studio 3.6 RC1 (or newer) to be able to build the
 All contributions are welcome!
 Please feel free to post questions, recommendations, ideas, bugs by create [new issue](https://github.com/developersancho/CleanArchitectureMVVM/issues/new) following the template or if you want create directly [new pull request](https://github.com/developersancho/CleanArchitectureMVVM/compare).
 
+## Special Thanks
+-   [Mehmet Taş](https://github.com/mehmettas)
+-   [Pelin Gül Çınar](https://github.com/pelingcinar)
+-   [Mücahit Kambur](https://github.com/mucahitkambur)
+
 ## License
     Copyright 2019 developersancho.
     
