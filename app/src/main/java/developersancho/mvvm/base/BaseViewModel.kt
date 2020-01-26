@@ -1,7 +1,7 @@
 package developersancho.mvvm.base
 
 import androidx.lifecycle.ViewModel
-import developersancho.mvvm.IDataManager
+import com.developersancho.manager.IDataManager
 import java.lang.ref.WeakReference
 
 abstract class BaseViewModel<P>(val dataManager: IDataManager) : ViewModel() {
@@ -15,4 +15,5 @@ abstract class BaseViewModel<P>(val dataManager: IDataManager) : ViewModel() {
     fun setPresenter(presenter: P) {
         this.presenter = WeakReference(presenter)
     }
+
 }

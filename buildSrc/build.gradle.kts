@@ -4,9 +4,9 @@ plugins {
     `kotlin-dsl`
 }
 
-/*kotlinDslPluginOptions {
+kotlinDslPluginOptions {
     experimentalWarning.set(false)
-}*/
+}
 
 // Required since Gradle 4.10+.
 repositories {

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_view_binding"
+    app:startDestination="@id/viewBindingTestFragment">
+
+    <fragment
+        android:id="@+id/viewBindingTestFragment"
+        android:name="developersancho.mvvm.ui.viewbindingtest.ViewBindingTestFragment"
+        android:label="fragment_view_binding_test"
+        tools:layout="@layout/fragment_view_binding_test" />
+</navigation>

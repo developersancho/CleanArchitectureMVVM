@@ -16,9 +16,9 @@ android {
         applicationId = ApplicationId.id
         minSdkVersion(Versions.minSdk)
         targetSdkVersion(Versions.targetSdk)
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        vectorDrawables.useSupportLibrary = true
-        multiDexEnabled true
+        testInstrumentationRunner(BuildPlugins.testInstrumentationRunner)
+        vectorDrawables.useSupportLibrary(BuildPlugins.supportLibraryVectorDrawables)
+        multiDexEnabled(BuildPlugins.multidexEnable)
     }
 
     buildTypes {
@@ -45,17 +45,17 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = '1.8'
-        targetCompatibility = '1.8'
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
     }
 
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
     }
 
-    dataBinding {
-        enabled = true
-    }
+    dataBinding.enabled = true
+
+    viewBinding.enabled = true
 
     androidExtensions {
         experimental = true
@@ -108,13 +108,13 @@ android.applicationVariants.all { variant ->
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation project(Modules.repository)
-    implementation project(Modules.remote)
+    implementation project(Modules.manager)
     implementation project(Modules.local)
+    implementation project(Modules.remote)
     implementation project(Modules.widget)
-    implementation project(Modules.common)
+    implementation project(Modules.util)
 
-    implementation(Libraries.kotlin)
+    implementation(Libraries.kotlinStdLib)
     implementation(Libraries.appCompat)
     implementation(Libraries.coreKtx)
     implementation(Libraries.constraintLayout)
@@ -122,12 +122,12 @@ dependencies {
     implementation(Libraries.legacy)
     // firebase
     implementation(Libraries.firebaseCore)
+
     // Bindings
     kapt(Libraries.databinding)
+
     // navigation
-    implementation(Libraries.navFragment)
     implementation(Libraries.navFragmentKtx)
-    implementation(Libraries.navUi)
     implementation(Libraries.navUiKtx)
     // Coroutines
     implementation(Libraries.kotlinCoroutineCore)
@@ -139,12 +139,10 @@ dependencies {
     // okhttp
     implementation(Libraries.okhttp)
     implementation(Libraries.okhttpLogging)
-    implementation(Libraries.okhttpUrlConnection)
     // lifecycle
-    implementation(Libraries.lifeCycleLiveData)
-    implementation(Libraries.lifeCycleViewModel)
-    //implementation(Libraries.lifeCycleViewModelKtx)
-    implementation(Libraries.lifeCycleExtension)
+    implementation(Libraries.lifeCycleViewModelKtx)
+    implementation(Libraries.lifeCycleLiveDataKtx)
+    implementation(Libraries.lifeCycleRunTimeKtx)
     kapt(Libraries.lifeCycleCommon)
     // koin for di
     implementation(Libraries.koinCore)
@@ -157,6 +155,8 @@ dependencies {
     // glide
     implementation(Libraries.glide)
     kapt(Libraries.glideCompiler)
+    // timber
+    implementation(Libraries.timber)
 
     // test implementation
     testImplementation(Libraries.koinTest)

@@ -1,0 +1,51 @@
+
+plugins {
+    id("com.android.library")
+    id("kotlin-android")
+    id("kotlin-android-extensions")
+}
+
+android {
+    compileSdkVersion(Versions.compileSdk)
+
+    defaultConfig {
+        minSdkVersion(Versions.minSdk)
+        targetSdkVersion(Versions.targetSdk)
+        testInstrumentationRunner(BuildPlugins.testInstrumentationRunner)
+        vectorDrawables.useSupportLibrary = BuildPlugins.supportLibraryVectorDrawables
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation(Libraries.kotlinStdLib)
+    implementation(Libraries.appCompat)
+    implementation(Libraries.coreKtx)
+    implementation(Libraries.constraintLayout)
+    implementation(Libraries.material)
+    implementation(Libraries.legacy)
+    implementation(Libraries.dynamicAnimation)
+
+    testImplementation(Libraries.junit)
+    androidTestImplementation(Libraries.junitExt)
+    androidTestImplementation(Libraries.espressoCore)
+
+}

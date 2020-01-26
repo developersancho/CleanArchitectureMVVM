@@ -1,0 +1,88 @@
+
+plugins {
+    id("com.android.library")
+    id("kotlin-android")
+    id("kotlin-android-extensions")
+    id("kotlin-kapt")
+}
+
+android {
+    compileSdkVersion(Versions.compileSdk)
+
+    defaultConfig {
+        minSdkVersion(Versions.minSdk)
+        targetSdkVersion(Versions.targetSdk)
+        testInstrumentationRunner(BuildPlugins.testInstrumentationRunner)
+        multiDexEnabled(BuildPlugins.multidexEnable)
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+
+    androidExtensions {
+        experimental = true
+    }
+
+    kapt {
+        useBuildCache = true
+    }
+
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation(Libraries.kotlinStdLib)
+    implementation(Libraries.appCompat)
+    implementation(Libraries.coreKtx)
+
+    // retrofit
+    implementation(Libraries.gson)
+    implementation(Libraries.retrofit)
+    implementation(Libraries.retrofitConvertorGson)
+    implementation(Libraries.okhttp)
+    implementation(Libraries.okhttpLogging)
+    implementation(Libraries.retrofitCoroutineAdapter)
+
+    // koin
+    implementation(Libraries.koinAndroid)
+    implementation(Libraries.koinCore)
+    implementation(Libraries.koinScope)
+
+    implementation(Libraries.roomKtx)
+    kapt(Libraries.roomCompiler)
+
+    implementation(Libraries.timber)
+
+    // testing
+    androidTestImplementation(Libraries.junit)
+    androidTestImplementation(Libraries.koinTest)
+    testImplementation(Libraries.mockWebServer)
+
+    androidTestImplementation(Libraries.junitExt)
+    androidTestImplementation(Libraries.espressoCore)
+
+    testImplementation(Libraries.roboelectric)
+
+    implementation project(Modules.remote)
+    implementation project(Modules.local)
+}
