@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="issues">
+    <option name="index">
+      <map>
+        <entry key="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jakewharton.retrofit/retrofit2-kotlin-coroutines-adapter/0.9.2/260e80f6bd7a3a8ef371bce09df87cd87ea2176e/retrofit2-kotlin-coroutines-adapter-0.9.2-sources.jar!/com/jakewharton/retrofit2/adapter/kotlin/coroutines/CoroutineCallAdapterFactory.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Android-Crazy-Apps/etiket-app-android/app/src/main/java/developersancho/etiket/SplashViewModel.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Android-Crazy-Apps/etiket-app-android/common/base/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Android-Crazy-Apps/etiket-app-android/common/utils/src/main/java/developersancho/etiket/utils/NetworkUtils.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Android-Crazy-Apps/etiket-app-android/core/local/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Android-Crazy-Apps/etiket-app-android/core/manager/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Android-Crazy-Apps/etiket-app-android/core/manager/src/main/java/developersancho/etiket/manager/BaseDataManager.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Android-Crazy-Apps/etiket-app-android/core/remote/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Android-Crazy-Apps/etiket-app-android/core/remote/src/main/java/developersancho/etiket/remote/AuthInterceptor.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Android-Crazy-Apps/etiket-app-android/core/remote/src/main/java/developersancho/etiket/remote/NetworkState.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Android-Crazy-Apps/etiket-app-android/core/remote/src/main/java/developersancho/etiket/remote/RemoteDataException.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Android-Crazy-Apps/etiket-app-android/core/remote/src/main/java/developersancho/etiket/remote/RemoteModule.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/buildSrc/src/main/java/Dependencies.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/remote/src/main/java/com/developersancho/remote/di/RemoteModule.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

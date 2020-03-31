@@ -12,18 +12,18 @@ object ApplicationId {
 }
 
 object Versions {
-    const val minSdk = 19
+    const val minSdk = 21
     const val compileSdk = 29
     const val targetSdk = 29
     const val buildTools = "29.0.2"
     const val kotlinPlugin = "1.3.61"
-    const val androidPlugin = "3.6.0-rc01"
+    const val androidPlugin = "3.6.1"
 
     const val navigation = "2.1.0"
     const val appCompat = "1.1.0"
     const val coreKtx = "1.1.0"
     const val constraintLayout = "1.1.3"
-    const val material = "1.1.0-beta02"
+    const val material = "1.1.0"
     const val preference = "1.1.0"
 
     const val legacy = "1.0.0"

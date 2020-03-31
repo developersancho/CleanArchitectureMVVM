@@ -1,19 +1,28 @@
 package developersancho.mvvm.base
 
+import android.net.ConnectivityManager
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.LayoutRes
+import androidx.core.content.getSystemService
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
 import androidx.viewbinding.ViewBinding
+import com.developersancho.util.helper.ConnectivityChecker
 import com.developersancho.widget.ProgressLoadingDialog
 import kotlin.properties.ReadOnlyProperty
 import kotlin.reflect.KProperty
 
 abstract class BaseFragment : Fragment(), IBasePresenter {
+
+    private val connectivityChecker: ConnectivityChecker? by lazy {
+        val connectivityManager = activity?.getSystemService<ConnectivityManager>()
+        connectivityManager?.let { ConnectivityChecker(it) } ?: run { null }
+    }
 
     private val progress: ProgressLoadingDialog by lazy {
         ProgressLoadingDialog(context = requireContext())
@@ -47,9 +56,27 @@ abstract class BaseFragment : Fragment(), IBasePresenter {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        checkConnection()
         initUI(view)
         initListener()
     }
+
+    private fun checkConnection() {
+        connectivityChecker?.apply {
+            viewLifecycleOwner.lifecycle.addObserver(this)
+            connectedStatus.observe(viewLifecycleOwner, Observer<Boolean> {
+                if (it) {
+                    handleNetworkConnected()
+                } else {
+                    handleNoNetworkConnection()
+                }
+            })
+        } ?: handleNoNetworkConnection()
+    }
+
+    open fun handleNetworkConnected() {}
+
+    open fun handleNoNetworkConnection() {}
 
     override fun showLoading() {
         progress.toggle(status = true)

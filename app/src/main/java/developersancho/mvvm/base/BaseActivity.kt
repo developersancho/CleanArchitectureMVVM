@@ -1,18 +1,27 @@
 package developersancho.mvvm.base
 
 import android.R
+import android.net.ConnectivityManager
 import android.os.Bundle
 import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.getSystemService
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.FragmentActivity
+import androidx.lifecycle.Observer
 import androidx.viewbinding.ViewBinding
+import com.developersancho.util.helper.ConnectivityChecker
 import com.developersancho.widget.ProgressLoadingDialog
 
 abstract class BaseActivity : AppCompatActivity(), IBasePresenter {
+
+    private val connectivityChecker: ConnectivityChecker? by lazy {
+        val connectivityManager = getSystemService<ConnectivityManager>()
+        connectivityManager?.let { ConnectivityChecker(it) } ?: run { null }
+    }
 
     private val progress: ProgressLoadingDialog by lazy {
         ProgressLoadingDialog(context = this)
@@ -37,12 +46,28 @@ abstract class BaseActivity : AppCompatActivity(), IBasePresenter {
         } ?: run {
             initBinding()
         }
-
+        checkConnection()
         initPresenter()
         initUI()
         initListener()
     }
 
+    private fun checkConnection() {
+        connectivityChecker?.apply {
+            lifecycle.addObserver(this)
+            connectedStatus.observe(this@BaseActivity, Observer<Boolean> {
+                if (it) {
+                    handleNetworkConnected()
+                } else {
+                    handleNoNetworkConnection()
+                }
+            })
+        } ?: handleNoNetworkConnection()
+    }
+
+    open fun handleNetworkConnected() {}
+
+    open fun handleNoNetworkConnection() {}
 
     override fun showLoading() {
         progress.toggle(status = true)
