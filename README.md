@@ -1,3 +1,10 @@
+# New Version Of Clean Architecture MVVM
+
+[Rorty Native Android Project](https://github.com/developersancho/Rorty.Android) - you can reach here.
+
+[Rorty Native Android Medium Post](https://developersancho.medium.com/android-modular-clean-architecture-with-rorty-app-5b4b08398492) - you can reach here.
+
+
 ## CleanArchitectureMVVM
 [![Kotlin Version](https://img.shields.io/badge/kotlin-1.3.61-blue.svg)](http://kotlinlang.org/)
 [![Gradle](https://img.shields.io/badge/gradle-5.6.4-blue.svg)](https://lv.binarybabel.org/catalog/gradle/latest)
